@@ -6,9 +6,9 @@ For first time setup make sure to setup the Configuration for Flask Mail. Note f
 
 # API Endpoints
 # 1. Send Email
-Endpoint: /send_email \n
-Method: POST
-Description: Sends an email based on the specified event.
+**Endpoint:** `/send_email`  
+**Method:** `POST`  
+**Description:** Sends an email based on the specified event.
 
 # Request:
 ```
@@ -39,9 +39,9 @@ print(response.json())
 }
 ```
 # 2. Unsubscribe
-Endpoint: /unsubscribe
-Method: POST
-Description: Unsubscribes a user from receiving further emails.
+**Endpoint:** /unsubscribe
+**Method:** POST
+**Description:** Unsubscribes a user from receiving further emails.
 
 # Request:
 ```
