@@ -10,7 +10,7 @@ For first time setup make sure to setup the Configuration for Flask Mail. Note f
 **Method:** `POST`  
 **Description:** Sends an email based on the specified event.
 
-# Request:
+## Request:
 ```
 {
     "event": "Inactive",
@@ -18,7 +18,7 @@ For first time setup make sure to setup the Configuration for Flask Mail. Note f
 }
 ```
 
-# Example Call:
+## Example Call:
 ```
 import requests
 
@@ -32,24 +32,24 @@ response = requests.post(url, json=data)
 print(response.json())
 ```
 
-# Response:
+## Response:
 ```
 {
     "message": "Email sent successfully"
 }
 ```
-## 2. Unsubscribe
+# 2. Unsubscribe
 **Endpoint:** `/unsubscribe`  
 **Method:** `POST`  
 **Description:** Unsubscribes a user from receiving further emails.
 
-# Request:
+## Request:
 ```
 {
     "email": "user1@example.com"
 }
 ```
-# Example Call:
+## Example Call:
 ```
 import requests
 
@@ -61,7 +61,7 @@ data = {
 response = requests.post(url, json=data)
 print(response.json())
 ```
-# Response:
+## Response:
 ```
 {
     "message": "User unsubscribed successfully"
