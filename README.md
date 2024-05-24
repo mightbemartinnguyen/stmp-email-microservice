@@ -5,12 +5,12 @@ This microservice handles sending email notifications for different events and a
 For first time setup make sure to setup the Configuration for Flask Mail. Note for gmail, you will have to use an app-password instead of a regular password. After that you would run the microservice with python app.py.
 
 # API Endpoints
-1. Send Email
-Endpoint: /send_email
+# 1. Send Email
+# Endpoint: /send_email
 Method: POST
 Description: Sends an email based on the specified event.
 
-Request:
+# Request:
 {
     "event": "Inactive",
     "email": "user1@example.com"
