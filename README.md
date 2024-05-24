@@ -6,7 +6,7 @@ For first time setup make sure to setup the Configuration for Flask Mail. Note f
 
 # API Endpoints
 # 1. Send Email
-Endpoint: /send_email
+Endpoint: /send_email \n
 Method: POST
 Description: Sends an email based on the specified event.
 
