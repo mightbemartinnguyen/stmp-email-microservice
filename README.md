@@ -11,14 +11,16 @@ Method: POST
 Description: Sends an email based on the specified event.
 
 # Request:
-```{
+```
+{
     "event": "Inactive",
     "email": "user1@example.com"
 }
 ```
 
 # Example Call:
-```import requests
+```
+import requests
 
 url = 'http://127.0.0.1:5000/send_email'
 data = {
