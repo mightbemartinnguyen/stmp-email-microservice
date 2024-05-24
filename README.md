@@ -38,9 +38,9 @@ print(response.json())
     "message": "Email sent successfully"
 }
 ```
-# 2. Unsubscribe
-**Endpoint:** `/unsubscribe`
-**Method:** `POST`
+## 2. Unsubscribe
+**Endpoint:** `/unsubscribe`  
+**Method:** `POST`  
 **Description:** Unsubscribes a user from receiving further emails.
 
 # Request:
