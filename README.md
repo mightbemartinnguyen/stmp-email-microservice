@@ -1,0 +1,1 @@
+# stmp-email-microservice
