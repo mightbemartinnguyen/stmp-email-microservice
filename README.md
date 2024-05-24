@@ -11,13 +11,14 @@ Method: POST
 Description: Sends an email based on the specified event.
 
 # Request:
-{
+```{
     "event": "Inactive",
     "email": "user1@example.com"
 }
+```
 
 # Example Call:
-import requests
+```import requests
 
 url = 'http://127.0.0.1:5000/send_email'
 data = {
@@ -27,23 +28,27 @@ data = {
 
 response = requests.post(url, json=data)
 print(response.json())
+```
 
 # Response:
+```
 {
     "message": "Email sent successfully"
 }
-
+```
 # 2. Unsubscribe
 Endpoint: /unsubscribe
 Method: POST
 Description: Unsubscribes a user from receiving further emails.
 
 # Request:
+```
 {
     "email": "user1@example.com"
 }
-
+```
 # Example Call:
+```
 import requests
 
 url = 'http://127.0.0.1:5000/unsubscribe'
@@ -53,9 +58,10 @@ data = {
 
 response = requests.post(url, json=data)
 print(response.json())
-
+```
 # Response:
+```
 {
     "message": "User unsubscribed successfully"
 }
-
+```
