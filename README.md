@@ -67,3 +67,7 @@ print(response.json())
     "message": "User unsubscribed successfully"
 }
 ```
+
+UML Sequence Diagram
+![UML Sequence Diagram](./UML%20Diagram.png)
+
