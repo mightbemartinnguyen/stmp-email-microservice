@@ -16,30 +16,25 @@ def send_post_request(endpoint, data):
     try:
         response_data = response.json()
     except requests.exceptions.JSONDecodeError:
-        print(f"Failed to decode JSON. Status code: {response.status_code}, Response text: {response.text}")
+        print(f"Failed to decode JSON. Status code: {response.status_code}, 
+              Response text: {response.text}")
         response_data = None
     return response_data
 
+def sendEventEmail(eventName, email_data):
+    response = send_post_request("send_email", email_data)
+    print(f"{eventName} response: {response}")
+
 def main():
-    # Send Inactive event email
-    print("Sending Inactive event email...")
-    inactive_response = send_post_request("send_email", email_data['Inactive'])
-    print(f"Inactive event response: {inactive_response}")
-
-    # Send Missed Transcription event email
     print("Sending Missed Transcription event email...")
-    missed_transcription_response = send_post_request("send_email", email_data['MissedTranscription'])
-    print(f"Missed Transcription event response: {missed_transcription_response}")
+    sendEventEmail("Missed Transcription", email_data['MissedTranscription'])
 
-    # Unsubscribe user
     print("Unsubscribing user1@example.com...")
     unsubscribe_response = send_post_request("unsubscribe", email_data['Unsubscribe'])
     print(f"Unsubscribe response: {unsubscribe_response}")
 
-    # Try sending Inactive event email to unsubscribed user
     print("Sending Inactive event email to unsubscribed user...")
-    inactive_response_after_unsubscribe = send_post_request("send_email", email_data['Inactive'])
-    print(f"Inactive event response after unsubscribe: {inactive_response_after_unsubscribe}")
+    sendEventEmail("Inactive", email_data['Inactive'])
 
 if __name__ == "__main__":
     main()

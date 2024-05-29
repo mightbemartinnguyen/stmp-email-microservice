@@ -39,12 +39,16 @@ def send_email():
 
 def send_inactive_email(email):
     msg = Message('We Miss You!', sender=app.config['MAIL_USERNAME'], recipients=[email])
-    msg.body = 'It seems like you haven’t used our application in a while. We miss you! Click here to unsubscribe.'
+    msg.body = 'It seems like you haven’t used our application in a while.\
+                We miss you! Click here to unsubscribe.'
     mail.send(msg)
 
 def send_missed_transcription_email(email):
-    msg = Message('You Have a Pending Transcription', sender=app.config['MAIL_USERNAME'], recipients=[email])
-    msg.body = 'You have a transcription that you haven’t viewed yet. Don’t miss out! Click here to unsubscribe.'
+    msg = Message('You Have a Pending Transcription', 
+                  sender=app.config['MAIL_USERNAME'], 
+                  recipients=[email])
+    msg.body = 'You have a transcription that you haven’t viewed yet. \
+                Don’t miss out! Click here to unsubscribe.'
     mail.send(msg) 
 
 @app.route('/unsubscribe', methods=['POST'])
